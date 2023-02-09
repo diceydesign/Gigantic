@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+* {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
+  /*border: 1px blue solid;*/
+}
+
+body {
+  background-color: #fbf6f4;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+.wrapper {
+  
+  margin: 0 auto;
+  background-color: #f6e9e3;
+  max-width: 800px;
+}
+
+.header {
+  border-top: 40px solid #7ca0df;
+  padding: 0px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #7ca0df;
+  position: sticky;
+  top: 0;
+  background-color: #f6e9e3;
+  z-index: 100;
+}
+
+.myNav-scrolled {
+  box-shadow: 0 4px 2px -2px #717d91;
+}
+
+.logo img {
+  width: 140px;
+}
+
+.menu-icon {
+  color: #7ca0df;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.home-page-thumbnails a {
+  display: block;
+  width: 100%;
+  height: 300px;
+  padding: 140px 200px 0px 50px;
+}
+
+.home-page-thumbnails a:hover {
+  opacity: 0.5;
+}
+
+.story {
+  background-image: url("images/story.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.beers {
+  background-image: url("images/shop.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.locations {
+  background-image: url("images/locations.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.footer {
+  background-color: #7ca0df;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  background-image: url("images/Asset\ 5@2x.png");
+  background-size: cover;
+}
+
+.thumbs img {
+  width: 200px;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 0;
+  width: 100%;
+  overflow-y: hidden;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(124, 160, 223); /* Blue fallback color */
+  background-color: rgba(124, 160, 223, 0.8); /* Blue w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  z-index: 101
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fbf6f4;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  color: #cdeb56;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.cheers-container {
+  display: flex;
+}
+
+.cheers-container >*{
+  width: 50%;
+}
+.cheers-container img {
+  width: 300px;
+  border: 2px solid #cdeb56;
+  margin-right: 4%;
+  margin-bottom: 5%;
+}
+
+.cheers-container div p:first-of-type {
+  margin: 0;
+}
+.story-images img {
+  border: 2px solid #cdeb56;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.page-content p {
+  color: #e75e34;
+}
+
+.page-content h1 {
+  font-size: 60px;
+  color: #e75e34;
+  margin: 5% 0 2% 0;
+}
+
+.page-content {
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 40px;
+}
+
+.index .page-content {
+  margin: 0;
+}
+
+.the-team {
+  color: #7ca0df;
+  margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  text-align: center;
+  
+}
+
+.heading {
+  font-size: 40px;
+  color: #e75e34;
+  text-align: center;
+}
+
+.staff-box {
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.staff-box img {
+	width: 100%;
+	border-radius: 50%;
+	border: 2px solid #7ca0df;
+}
+
+@media (min-width: 800px) {
+	.staff-box {
+		width: 25%;
+	}
+}
+/* form stuff */
+
+/* Style inputs */
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #7ca0df;
+  font-size: 1em;
+  resize: none;
+}
+
+button {
+  background-color: #cdeb56;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #e75e34;
+  font-size: 0.8em;
+  margin: 10px auto;
+  width: 80px;
+}
+
+button:hover {
+  background-color: #cdeb56;
+}
+
+.contact-holder {
+  margin: 30px auto;
+  padding: 10px 40px;
+  max-width: 400px;
+  background-color: rgba(124, 160, 223, 0.2);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.contact-holder form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page h1 {
+  text-align: center;
+}
+
+.contact-page p {
+text-align: center;
+}
+
+.contact-holder form > *{
+margin-top: 20px;
+}
+
+.contact-holder label {
+  float: left;
+  color: #e75e34;
+}
+.my-shop {
+  max-width: 600px;
+  margin: 20px auto;
+
+}
+.map-iframe-container{
+  margin: 40px auto;
+}
+.happy .the-team {
+  color: #7ca0df;
+  margin-top: 10px;
+  display: unset;
+  /* display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  text-align: center; */
+  
+}
+
+.happy h1{
+  text-align: left;
+}
+
+.happy .staff-box{
+  display: flex;
+  width: unset;
+}
+
+.happy .staff-box img{
+  width: 30%;
+  border: 2px solid #cdeb56;
+}
+
+.happy .staff-box:nth-child(even) img{
+  order: 3;
+}
+
+.happy .staff-box p {
+  text-align: right;
+  margin-left: 10px;
+}
+
+.happy .staff-box:nth-child(even) p{
+  text-align: left;
+  margin: 0px 10px 0px 0px;
+}
+
+.happy .staff-box h2{
+  text-align: right;
+}
+.happy .staff-box:nth-child(even) h2{
+  text-align: left;
+}
+h2 {
+  color: #7ca0df
+}
+.faqs a {
+  text-decoration: underline;
+  color: #e75e34
+}
+
+.faqs a:hover {
+  color: #cdeb56
+}
+
+.faqs a:visited {
+  color: #7ca0df
+}
+.footer a{
+  text-decoration: underline;
+}
+
+.footer a:visited {
+  color: #e75e34;
+}
+.footer a:hover {
+  color: #cdeb56;
+}

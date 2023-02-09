@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - GBC</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="wrapper contact-page">
+      <div class="header">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/LOGO@2x.png" />
+          </a>
+        </div>
+        <p class="menu-icon"><span onclick="openNav()">&#9776;</span></p>
+      </div>
+
+      <div class="page-content">
+        <!-- modify this form HTML and place wherever you want your form -->
+        <h1>Contact us</h1>
+        <p>35 Victoria Street Brunswick 3056</p> 
+
+          <p>Call: +00 7777 6567</p>
+          
+          <p>Email: hello@gigantic.beer</p>
+          
+          <p>Or use our contact form to send us a message:</p>
+        <div class="contact-holder">
+          <form action="https://formspree.io/f/xrgrqavn" method="POST">
+            <div>
+              <label>
+              Your email:</label>
+              <input type="email" name="_replyto" />
+            </div>
+            <div>
+            <label>
+              Your message:</label>
+              <textarea name="message" rows="10"></textarea>
+            </div>
+            
+            <!-- your other form fields go here -->
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p><a href="privacy.html">Privacy Policy</a></p>
+        <p>Gigantic Brewing Co. &copy; 2021</p>
+      </div>
+
+      <!-- The overlay -->
+      <div id="myNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="index.html">Home</a>
+          <a href="story.html">Our Story</a>
+          <a href="beers.html">Shop</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="happy.html">Happy Customers</a>
+          <a href="locations.html">Visit Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script src="./script.js"></script>
+  </body>
+</html>
